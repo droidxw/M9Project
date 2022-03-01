@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Distribution License v. 1.0, which is available at
+    http://www.eclipse.org/org/documents/edl-v10.php.
+
+    SPDX-License-Identifier: BSD-3-Clause
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Facelets Hello Greeting</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h1>Registro de curriculum</h1>
+		<h2>Puesto</h2>
+		<h:inputText id="puesto" title="El puesto es:" required="true"
+			value="#{vacantesBean.puesto}" maxlength="200"
+			requiredMessage="El campo Habilidades es requerido." />
+		<p></p>
+		<h2>Habilidades</h2>
+		<h:inputTextarea id="habilidades" title="Las habilidades son:"
+			required="true" value="#{vacantesBean.habilidades}" maxlength="200"
+			requiredMessage="El campo es requerido." />
+		<p></p>
+		<h2>funciones</h2>
+		<h:inputTextarea id="funciones" title="las funciones son:"
+			required="true" value="#{vacantesBean.funciones}" maxlength="200"
+			requiredMessage="El campo funciones es requerido." />
+		<p></p>
+		<h2>departamento</h2>
+		<h:selectOneMenu id="departamento" title="Los departamentos son:"
+			value="#{vacantesBean.departamento}">
+
+			<f:selectItem itemLabel="compras" itemValue="1" />
+			<f:selectItem itemLabel="ventas" itemValue="2" />
+			<f:selectItem itemLabel="produccion" itemValue="3" />
+
+		</h:selectOneMenu>
+		<p></p>
+		<h2>Idiomas</h2>
+		<h:inputTextarea id="idiomas" title="Mis idiomas son:"
+			required="true" value="#{vacantesBean.idiomas}" maxlength="200"
+			requiredMessage="El campo idiomas es requerido." />
+
+		<p></p>
+		<h2>Experiencia</h2>
+		<h:inputTextarea id="experiencia" title="Mis experiencia es:"
+			required="true" value="#{vacantesBean.experiencia}" maxlength="200"
+			requiredMessage="El campo experiencia es requerido." />
+
+		<p></p>
+		
+		<h2>Escolaridad</h2>
+		<h:inputTextarea id="escolaridad" title="Mi escolaridad es:"
+			required="true" value="#{vacantesBean.escolaridad}" maxlength="200"
+			requiredMessage="El campo escolaridad es requerido." />
+		<p></p>
+		
+		<h2>Sueldo</h2>
+		<h:inputTextarea id="sueldo" title="Sueldo: "
+			required="true" value="#{vacantesBean.sueldo}" maxlength="200"
+			requiredMessage="El campo vacante es requerido." />
+		<p></p>
+		
+		
+		<h:commandButton id="submit" value="Enviar"
+			action="#{vacantesBean.registrar()}" />
+		<h:commandButton id="reset" value="Limpiar" type="reset" />
+	</h:form>
+	
+	<div class="messagecolor">
+		<h:messages showSummary="true" showDetail="false"
+			errorStyle="color: pink" infoStyle="color: blue" />
+	</div>
+	
+	<div>
+		
+	
+	</div>
+	
+	
+</h:body>
+</html>
+
