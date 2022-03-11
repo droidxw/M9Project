@@ -16,12 +16,11 @@ public class CandidatoBean implements Serializable {
 	/**
 	 * 
 	 */
-//	private static final long serialVersionUID = -8463063443349736411L;
-//	private String nombre;
-//	private String telefono;
-//	private String correo;
-//	private String mensajeRespuesta;
-	
+	private static final long serialVersionUID = -8463063443349736411L;
+
+
+	@Inject
+	private MessageBean messageBean;	
 	
 	private Integer id;
 	private String fabricante;
@@ -30,8 +29,7 @@ public class CandidatoBean implements Serializable {
 	private float portatilPrecio;
 	private float servidorPrecio;	
 	private String tipoEquipo;
-	private Integer existencias;
-	
+	private Integer existencias;	
 	
 
 	public String getDescripcion() {
@@ -46,12 +44,6 @@ public class CandidatoBean implements Serializable {
 	public void setTipoEquipo(String tipoEquipo) {
 		this.tipoEquipo = tipoEquipo;
 	}
-
-
-	@Inject
-	private MessageBean messageBean;
-	
-	
 	
 	public Integer getId() {
 		return id;
@@ -90,15 +82,7 @@ public class CandidatoBean implements Serializable {
 	public void setExistencias(Integer existencias) {
 		this.existencias = existencias;
 	}
-	
 
-//	public String getmensajeRespuesta() {
-//		return mensajeRespuesta;
-//	}
-//
-//	public void setmensajeRespuesta(String mensajerespuesta) {
-//		this.mensajeRespuesta = mensajerespuesta;
-//	}
 
 	public String registrar() {
 		System.out.println("guardando fabricante " + fabricante);
@@ -109,28 +93,5 @@ public class CandidatoBean implements Serializable {
 		return "index";
 	}
 
-//	public String getNombre() {
-//		return nombre;
-//	}
-//
-//	public void setNombre(String nombre) {
-//		this.nombre = nombre;
-//	}
-//
-//	public String getTelefono() {
-//		return telefono;
-//	}
-//
-//	public void setTelefono(String telefono) {
-//		this.telefono = telefono;
-//	}
-//
-//	public String getCorreo() {
-//		return correo;
-//	}
-//
-//	public void setCorreo(String correo) {
-//		this.correo = correo;
-//	}
 
 }
