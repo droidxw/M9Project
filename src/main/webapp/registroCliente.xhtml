@@ -20,35 +20,38 @@
 </h:head>
 <h:body>
 	<h:form>
-		<h1>Registro de curriculum</h1>
-		<h2>Habilidades</h2>
-		<h:inputTextarea id="habilidades" title="Mis habilidades son:"
-			required="true" value="#{curriculumBean.habilidades}" maxlength="200"
+			<h:graphicImage url="#{resource['images:info.jpg']}"
+			alt="Duke waving his hand" />
+		<h1>Registro de cliente</h1>
+		<h2>Nombre</h2>
+		<!-- 		value es la instanciacion del elemento de la clase -->
+		<h:inputTextarea id="nombre" title="Mis nombre son:"
+			required="true" value="#{ClienteBean.nombre}" maxlength="200"
 			requiredMessage="El campo Habilidades es requerido." />
 		<p></p>
-		<h2>Conocimientos</h2>
-		<h:inputTextarea id="conocimientos" title="Mis conocimientos son:"
-			required="true" value="#{curriculumBean.conocimientos}"
+		<h2>Direccion</h2>
+		<h:inputTextarea id="direccion" title="Mis direccion son:"
+			required="true" value="#{ClienteBean.direccion}"
 			maxlength="200" requiredMessage="El campo es requerido." />
 		<p></p>
-		<h2>Idiomas</h2>
-		<h:inputTextarea id="idiomas" title="Mis idiomas son:"
-			required="true" value="#{curriculumBean.idiomas}" maxlength="200"
+		<h2>Telefono</h2>
+		<h:inputTextarea id="telefono" title="Mis telefono son:"
+			required="true" value="#{ClienteBean.telefono}" maxlength="200"
 			requiredMessage="El campo Conocimientos es requerido." />
 		<p></p>
-		<h2>Experiencia</h2>
-		<h:inputTextarea id="experiencia" title="Mi experiencia es:"
-			required="true" value="#{curriculumBean.experiencia}" maxlength="200"
+		<h2>RFC</h2>
+		<h:inputTextarea id="rfc" title="Mi rfc es:"
+			required="true" value="#{ClienteBean.rfc}" maxlength="200"
 			requiredMessage="El campo Experiencia es requerido." />
 		<p></p>
-		<h2>Escolaridad</h2>
-		<h:inputTextarea id="escolaridad" title="Mi escolaridad es:"
-			required="true" value="#{curriculumBean.escolaridad}" maxlength="200"
+		<h2>Nacimiento</h2>
+		<h:inputTextarea id="nacimiento" title="Mi nacimiento es:"
+			required="true" value="#{ClienteBean.nacimiento}" maxlength="200"
 			requiredMessage="El campo Escolaridad es requerido." />
 
 		<p></p>
 		<h:commandButton id="submit" value="Enviar"
-			action="#{curriculumBean.registrar()}" />
+			action="#{ClienteBean.registrar()}" />
 		<h:commandButton id="reset" value="Limpiar" type="reset" />
 	</h:form>
 	<div class="messagecolor">

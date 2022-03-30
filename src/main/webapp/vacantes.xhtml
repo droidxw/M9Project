@@ -17,61 +17,72 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-	<title>Facelets Hello Greeting</title>
+	<title>Pagina de inventario</title>
 </h:head>
 <h:body>
 	<h:form>
-		<h1>Registro de curriculum</h1>
-		<h2>Puesto</h2>
+			<h:graphicImage url="#{resource['images:duke.waving.gif']}"
+			alt="Duke waving his hand" />
+		<h1>Registro de orden</h1>
+		
+		<h2>Orden Id</h2>
 		<h:inputText id="puesto" title="El puesto es:" required="true"
-			value="#{vacantesBean.puesto}" maxlength="200"
+			value="#{vacantesBean.orden}" maxlength="200"
 			requiredMessage="El campo Habilidades es requerido." />
 		<p></p>
-		<h2>Habilidades</h2>
+		
+		<h2>cliente</h2>
 		<h:inputTextarea id="habilidades" title="Las habilidades son:"
-			required="true" value="#{vacantesBean.habilidades}" maxlength="200"
-			requiredMessage="El campo es requerido." />
+			required="true" value="#{vacantesBean.cliente}" maxlength="200"
+			requiredMessage="El campo es requerido." />		
 		<p></p>
-		<h2>funciones</h2>
+		
+		<h2>cantidad de articulos</h2>
 		<h:inputTextarea id="funciones" title="las funciones son:"
-			required="true" value="#{vacantesBean.funciones}" maxlength="200"
+			required="true" value="#{vacantesBean.cantidad}" maxlength="200"
 			requiredMessage="El campo funciones es requerido." />
 		<p></p>
-		<h2>departamento</h2>
+		
+		<h2>Fecha</h2>
+		<h:inputTextarea id="experiencia" title="Mis experiencia es:"
+			required="true" value="#{vacantesBean.fecha}" maxlength="200"
+			requiredMessage="El campo experiencia es requerido." />
+		<p></p>
+		
+	
+		
+		<h2>Montototal</h2>
+		<h:inputTextarea id="idiomas" title="Mis idiomas son:"
+			required="true" value="#{vacantesBean.montoTotal}" maxlength="200"
+			requiredMessage="El campo idiomas es requerido." />
+		<p></p>
+		
+		
+		
+			<h2>Metodo Pago</h2>
 		<h:selectOneMenu id="departamento" title="Los departamentos son:"
-			value="#{vacantesBean.departamento}">
+			value="#{vacantesBean.metodoPago}">
 
-			<f:selectItem itemLabel="compras" itemValue="1" />
-			<f:selectItem itemLabel="ventas" itemValue="2" />
-			<f:selectItem itemLabel="produccion" itemValue="3" />
+			<f:selectItem itemLabel="tdc" itemValue="1" />
+			<f:selectItem itemLabel="tdb" itemValue="2" />
+			<f:selectItem itemLabel="efectivo" itemValue="3" />
 
 		</h:selectOneMenu>
 		<p></p>
-		<h2>Idiomas</h2>
-		<h:inputTextarea id="idiomas" title="Mis idiomas son:"
-			required="true" value="#{vacantesBean.idiomas}" maxlength="200"
-			requiredMessage="El campo idiomas es requerido." />
+		
+	
+		
+			<h2>Devolucion</h2>
+		<h:selectOneMenu id="dep" title="Los departamentos son:"
+			value="#{vacantesBean.devolucion}">
 
-		<p></p>
-		<h2>Experiencia</h2>
-		<h:inputTextarea id="experiencia" title="Mis experiencia es:"
-			required="true" value="#{vacantesBean.experiencia}" maxlength="200"
-			requiredMessage="El campo experiencia es requerido." />
+			<f:selectItem itemLabel="Na" itemValue="1" />
+			<f:selectItem itemLabel="Devolucion" itemValue="2" />
+			
 
+		</h:selectOneMenu>
 		<p></p>
-		
-		<h2>Escolaridad</h2>
-		<h:inputTextarea id="escolaridad" title="Mi escolaridad es:"
-			required="true" value="#{vacantesBean.escolaridad}" maxlength="200"
-			requiredMessage="El campo escolaridad es requerido." />
-		<p></p>
-		
-		<h2>Sueldo</h2>
-		<h:inputTextarea id="sueldo" title="Sueldo: "
-			required="true" value="#{vacantesBean.sueldo}" maxlength="200"
-			requiredMessage="El campo vacante es requerido." />
-		<p></p>
-		
+
 		
 		<h:commandButton id="submit" value="Enviar"
 			action="#{vacantesBean.registrar()}" />

@@ -21,42 +21,39 @@
 </h:head>
 <h:body>
 	<h:form>
-
-		<h2>Vacantes definidas</h2>
+		<h:graphicImage url="#{resource['images:info.jpg']}"
+			alt="Duke waving his hand" />
+		<h2>Ordenes de compra</h2>
 
 
 		<h:dataTable value="#{listaVacantesBean.vacantes}" var="vacante">
 
 			<h:column>
-				<h:inputText value="#{vacante.puesto}" />
+				<h:inputText value="#{vacante.orden}" />
 			</h:column>
 			
 			<h:column>
-				<h:inputText value="#{vacante.habilidades}" />
+				<h:inputText value="#{vacante.cliente}" />
 			</h:column>
 
 			<h:column>
-				<h:inputText value="#{vacante.funciones}" />
+				<h:inputText value="#{vacante.cantidad}" />
 			</h:column>
 			
 			<h:column>
-				<h:inputText value="#{vacante.departamento}" />
+				<h:inputText value="#{vacante.fecha}" />
 			</h:column>
 			
 			<h:column>
-				<h:inputText value="#{vacante.sueldo}" />
+				<h:inputText value="#{vacante.montoTotal}" />
 			</h:column>
 			
 			<h:column>
-				<h:inputText value="#{vacante.idiomas}" />
+				<h:inputText value="#{vacante.metodoPago}" />
 			</h:column>
 			
 			<h:column>
-				<h:inputText value="#{vacante.experiencia}" />
-			</h:column>
-			
-			<h:column>
-				<h:inputText value="#{vacante.escolaridad}" />
+				<h:inputText value="#{vacante.devolucion}" />
 			</h:column>
 
 		</h:dataTable>

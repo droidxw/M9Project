@@ -20,27 +20,27 @@
 </h:head>
 <h:body>
 	<h:form>
-		<h:graphicImage url="#{resource['images:duke.waving.gif']}"
+		<h:graphicImage url="#{resource['images:info.jpg']}"
 			alt="Duke waving his hand" />
 		<h2>Fabricante</h2>
 		<h:inputText id="fabricante" title="Fabricante: "
-			value="#{candidatoBean.fabricante}" required="true"
+			value="#{TipoBean.fabricante}" required="true"
 			requiredMessage="Error: Introduce fabricante." maxlength="25" />
 
 		<h2>Tipo de Equipo</h2>
 		<h:inputText id="tipoEquipo" title="tipoEquipo"
-			value="#{candidatoBean.tipoEquipo}" required="true"
+			value="#{TipoBean.tipoEquipo}" required="true"
 			requiredMessage="Error: Introduce equipo." maxlength="50" />
 
 
 		<h2>Existencias</h2>
 		<h:inputText id="existencias" title="existencias"
-			value="#{candidatoBean.existencias}" required="true"
+			value="#{TipoBean.existencias}" required="true"
 			requiredMessage="Error: Introduce existencias." maxlength="50" />
 
 
 		<p></p>
-		<h:commandButton id="submit" value="Enviar" action="#{candidatoBean.registrar()}" />
+		<h:commandButton id="submit" value="Enviar" action="#{TipoBean.registrar()}" />
 		<h:commandButton id="reset" value="Limpiar" type="reset" />
 	</h:form>
 	<div class="messagecolor">

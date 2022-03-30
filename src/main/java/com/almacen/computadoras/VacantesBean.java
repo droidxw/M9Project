@@ -13,15 +13,14 @@ public class VacantesBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 3826226006817834985L;
 
-	private String puesto;
-	private String habilidades;
-	private String funciones;
-	private int departamento;
-	private Double sueldo;
+	private String orden;
+	private String cliente;
+	private String cantidad;
+	private String fecha;
 
-	private String idiomas;
-	private String experiencia;
-	private String escolaridad;
+	private String montoTotal;
+	private String metodoPago;
+	private String devolucion;
 
 	@Inject
 	private ListaVacantesBean listaVacantesBean;
@@ -29,89 +28,132 @@ public class VacantesBean implements Serializable {
 	@Inject
 	private MessageBean messageBean;
 
-	public String getPuesto() {
-		return puesto;
+	
+
+	public String getOrden() {
+		return orden;
 	}
 
-	public void setPuesto(String puesto) {
-		this.puesto = puesto;
+
+
+	public void setOrden(String orden) {
+		this.orden = orden;
 	}
 
-	public String getHabilidades() {
-		return habilidades;
+
+
+	public String getCliente() {
+		return cliente;
 	}
 
-	public void setHabilidades(String habilidades) {
-		this.habilidades = habilidades;
+
+
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
 	}
 
-	public String getFunciones() {
-		return funciones;
+
+
+	public String getCantidad() {
+		return cantidad;
 	}
 
-	public void setFunciones(String funciones) {
-		this.funciones = funciones;
+
+
+	public void setCantidad(String cantidad) {
+		this.cantidad = cantidad;
 	}
 
-	public int getDepartamento() {
-		return departamento;
+
+
+	public String getFecha() {
+		return fecha;
 	}
 
-	public void setDepartamento(int departamento) {
-		this.departamento = departamento;
+
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
 	}
 
-	public Double getSueldo() {
-		return sueldo;
+
+
+	public String getMontoTotal() {
+		return montoTotal;
 	}
 
-	public void setSueldo(Double sueldo) {
-		this.sueldo = sueldo;
+
+
+	public void setMontoTotal(String montoTotal) {
+		this.montoTotal = montoTotal;
 	}
 
-	public String getIdiomas() {
-		return idiomas;
+
+
+	public String getMetodoPago() {
+		return metodoPago;
 	}
 
-	public void setIdiomas(String idiomas) {
-		this.idiomas = idiomas;
+
+
+	public void setMetodoPago(String metodoPago) {
+		this.metodoPago = metodoPago;
 	}
 
-	public String getExperiencia() {
-		return experiencia;
+
+
+	public String getDevolucion() {
+		return devolucion;
 	}
 
-	public void setExperiencia(String experiencia) {
-		this.experiencia = experiencia;
+
+
+	public void setDevolucion(String devolucion) {
+		this.devolucion = devolucion;
 	}
 
-	public String getEscolaridad() {
-		return escolaridad;
+
+
+	public ListaVacantesBean getListaVacantesBean() {
+		return listaVacantesBean;
 	}
 
-	public void setEscolaridad(String escolaridad) {
-		this.escolaridad = escolaridad;
+
+
+	public void setListaVacantesBean(ListaVacantesBean listaVacantesBean) {
+		this.listaVacantesBean = listaVacantesBean;
 	}
+
+
+
+	public MessageBean getMessageBean() {
+		return messageBean;
+	}
+
+
+
+	public void setMessageBean(MessageBean messageBean) {
+		this.messageBean = messageBean;
+	}
+
+
 
 	public String registrar() {
-		System.out.println("puesto: " + puesto);
-		System.out.println("escolaridad " + escolaridad);
-		System.out.println("experiencia " + experiencia);
-		System.out.println("funciones " + funciones);
-		System.out.println("habilidades " + habilidades);
-		System.out.println("departamento " + departamento);
-		System.out.println("idiomas " + idiomas);
-		System.out.println("sueldo " + sueldo);
-		String mensaje = "la vacante " + puesto + "ha quedado registrado";
+		System.out.println("cantidad: " + cantidad);
+		System.out.println("fecha " + fecha);
+		System.out.println("monto total " + montoTotal);
+		System.out.println("metodo de pago " + metodoPago);
+
+		String mensaje = "la orden " + orden + " ha quedado registrada";
 		VacanteModel model = new VacanteModel();
-		model.setDepartamento(departamento);
-		model.setEscolaridad(escolaridad);
-		model.setExperiencia(experiencia);
-		model.setFunciones(funciones);
-		model.setHabilidades(habilidades);
-		model.setIdiomas(idiomas);
-		model.setPuesto(puesto);
-		model.setSueldo(sueldo);
+		model.setOrden(orden);
+		model.setCliente(cliente);
+		model.setCantidad(cantidad);
+		model.setFecha(fecha);
+		model.setMontoTotal(montoTotal);
+		model.setMetodoPago(metodoPago);
+		model.setDevolucion(devolucion);
+		
 		listaVacantesBean.agregar(model);
 		for ( VacanteModel v : listaVacantesBean.getVacantes()) {
 			System.out.println(v);

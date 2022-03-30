@@ -2,7 +2,6 @@ package com.almacen.computadoras;
 
 import java.io.Serializable;
 
-import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
@@ -11,67 +10,51 @@ import jakarta.inject.Named;
 @SessionScoped
 //serializable para persistir al usar session en N lugares BD, memoria, contexto
 //cuando es un request solo existe la info del bean de clase a clase
-public class CandidatoBean implements Serializable {
+public class TipoBean implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8463063443349736411L;
 
-
 	@Inject
-	private MessageBean messageBean;	
-	
+	private MessageBean messageBean;
+
 	private Integer id;
 	private String fabricante;
-	private String descripcion;
-	private float escritorioPrecio;
-	private float portatilPrecio;
-	private float servidorPrecio;	
-	private String tipoEquipo;
-	private Integer existencias;	
-	
+	private String clave;
 
-	public String getDescripcion() {
-		return descripcion;
+	private String tipoEquipo;
+	private Integer existencias;
+
+	public String getClave() {
+		return clave;
 	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+
+	public void setClave(String descripcion) {
+		this.clave = descripcion;
 	}
+
 	public String getTipoEquipo() {
 		return tipoEquipo;
 	}
+
 	public void setTipoEquipo(String tipoEquipo) {
 		this.tipoEquipo = tipoEquipo;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public float getEscritorioPrecio() {
-		return escritorioPrecio;
-	}
-	public void setEscritorioPrecio(float escritorioPrecio) {
-		this.escritorioPrecio = escritorioPrecio;
-	}
-	public float getPortatilPrecio() {
-		return portatilPrecio;
-	}
-	public void setPortatilPrecio(float portatilPrecio) {
-		this.portatilPrecio = portatilPrecio;
-	}
-	public float getServidorPrecio() {
-		return servidorPrecio;
-	}
-	public void setServidorPrecio(float servidorPrecio) {
-		this.servidorPrecio = servidorPrecio;
-	}
+
 	public String getFabricante() {
 		return fabricante;
 	}
+
 	public void setFabricante(String fabricante) {
 		this.fabricante = fabricante;
 	}
@@ -79,19 +62,18 @@ public class CandidatoBean implements Serializable {
 	public Integer getExistencias() {
 		return existencias;
 	}
+
 	public void setExistencias(Integer existencias) {
 		this.existencias = existencias;
 	}
-
 
 	public String registrar() {
 		System.out.println("guardando fabricante " + fabricante);
 		System.out.println("guardando  " + tipoEquipo);
 		System.out.println("guardando  " + existencias);
-		messageBean.setMensaje("El equipo " + fabricante+ ", ha quedado registrado el equipo");
-		//pagina donde se muestra msj que haz quedado registrado
+		messageBean.setMensaje("El equipo " + fabricante + ", ha quedado registrado el equipo");
+		// pagina donde se muestra msj que haz quedado registrado
 		return "index";
 	}
-
 
 }

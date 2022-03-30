@@ -20,6 +20,8 @@
 </h:head>
 <h:body>
 	<h:form>
+		<h:graphicImage url="#{resource['images:info.jpg']}"
+			alt="Duke waving his hand" />
 <!--Pantalla de menu de inicio (Donde esta lo que mostramos al inicio con botones) -->
 <!-- no podemos incluir funcionalidades asociadas a algun bean -->
 		<h2>Registro de inventario</h2>
@@ -28,13 +30,13 @@
 		<h:commandButton id="registroEquipo" value="registrar equipo"
 			action="registroEquipo" />
 			
-		<h:commandButton id="registroCV" value="registrar curriculum"
-			action="registroCV" />
+		<h:commandButton id="registroCliente" value="registrar cliente"
+			action="registroCliente" />
 			
-		<h:commandButton id="registroVacantes" value="registrar Vacantes"
+		<h:commandButton id="registroVacantes" value="registrar Orden"
 			action="vacantes" />
-			
-		<h:commandButton id="listadoVacantes" value="ver Vacantes"
+<!-- 			value es el valor del boton mostrado en la pantalla -->
+		<h:commandButton id="listadoVacantes" value="ver Ordenes"
 			action="listadoVacantes" />
 	</h:form>
 
