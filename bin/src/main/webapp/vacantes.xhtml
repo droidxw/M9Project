@@ -15,16 +15,12 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	 xmlns:jsf="http://xmlns.jcp.org/jsf">
-
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
 	<title>Pagina de inventario</title>
 </h:head>
 <h:body>
 	<h:form>
-			<h:graphicImage url="#{resource['images:duke.waving.gif']}"
-			alt="Duke waving his hand" />
 		<h1>Registro de orden</h1>
 		
 		<h2>Orden Id</h2>
@@ -45,22 +41,12 @@
 			requiredMessage="El campo funciones es requerido." />
 		<p></p>
 		
-<!-- 		<h2>Fecha</h2> -->
-<!-- 		<h:inputTextarea id="experiencia" title="Mis experiencia es:" -->
-<!-- 			required="true" value="#{vacantesBean.fecha}" maxlength="200" -->
-<!-- 			requiredMessage="El campo experiencia es requerido." /> -->
-<!-- 		<p></p> -->
+		<h2>Fecha</h2>
+		<h:inputTextarea id="experiencia" title="Mis experiencia es:"
+			required="true" value="#{vacantesBean.fecha}" maxlength="200"
+			requiredMessage="El campo experiencia es requerido." />
+		<p></p>
 		
-
-
-<h2>Fecha</h2>
-   <p>
-                <label>Performance Date:</label>
-                <br/>
-                <input type="date" jsf:id="date" name="date" 
-                       value="#{vacantesBean.fecha}" required="required"
-                       title="Enter or choose a date."/>
-            </p>
 	
 		
 		<h2>Montototal</h2>
@@ -106,7 +92,10 @@
 			errorStyle="color: pink" infoStyle="color: blue" />
 	</div>
 	
+	<div>
+		
 	
+	</div>
 	
 	
 </h:body>

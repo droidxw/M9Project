@@ -8,7 +8,7 @@
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
                 
-        <property name="java-output-path" value="/reclutamiento1/target/classes"/>
+        <property name="java-output-path" value="/almacen/target/classes"/>
         <property name="context-root" value="reclutamiento"/>
             
     </wb-module>

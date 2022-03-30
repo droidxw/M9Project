@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Distribution License v. 1.0, which is available at
+    http://www.eclipse.org/org/documents/edl-v10.php.
+
+    SPDX-License-Identifier: BSD-3-Clause
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>Facelets Hello Greeting</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h1>Registro de cliente</h1>
+		<h2>Nombre</h2>
+		<!-- 		value es la instanciacion del elemento de la clase -->
+		<h:inputTextarea id="nombre" title="Mis nombre son:"
+			required="true" value="#{ClienteBean.nombre}" maxlength="200"
+			requiredMessage="El campo Habilidades es requerido." />
+		<p></p>
+		<h2>Direccion</h2>
+		<h:inputTextarea id="direccion" title="Mis direccion son:"
+			required="true" value="#{ClienteBean.direccion}"
+			maxlength="200" requiredMessage="El campo es requerido." />
+		<p></p>
+		<h2>Telefono</h2>
+		<h:inputTextarea id="telefono" title="Mis telefono son:"
+			required="true" value="#{ClienteBean.telefono}" maxlength="200"
+			requiredMessage="El campo Conocimientos es requerido." />
+		<p></p>
+		<h2>RFC</h2>
+		<h:inputTextarea id="rfc" title="Mi rfc es:"
+			required="true" value="#{ClienteBean.rfc}" maxlength="200"
+			requiredMessage="El campo Experiencia es requerido." />
+		<p></p>
+		<h2>Nacimiento</h2>
+		<h:inputTextarea id="nacimiento" title="Mi nacimiento es:"
+			required="true" value="#{ClienteBean.nacimiento}" maxlength="200"
+			requiredMessage="El campo Escolaridad es requerido." />
+
+		<p></p>
+		<h:commandButton id="submit" value="Enviar"
+			action="#{ClienteBean.registrar()}" />
+		<h:commandButton id="reset" value="Limpiar" type="reset" />
+	</h:form>
+	<div class="messagecolor">
+		<h:messages showSummary="true" showDetail="false"
+			errorStyle="color: pink" infoStyle="color: blue" />
+	</div>
+</h:body>
+</html>
+
